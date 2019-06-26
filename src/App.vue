@@ -16,6 +16,11 @@ export default {
   components: {
     Group,
     Cell
+  },
+  mounted() {
+    console.log(this.$store.state.count,'store')
+    this.$store.commit('increment',{index:6},{},{})
+    console.log(this.$store.state.count,'store2')
   }
 }
 </script>

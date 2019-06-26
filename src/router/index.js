@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '../components/header'
+import Header from '../components/header'
+import Home from '../page/home/home'
 
 Vue.use(Router)
 const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Header',
+      component: Header
+    },
+    {
+      path:'/home',
+      name:'Home',
+      component:Home
     }
   ]
 })
