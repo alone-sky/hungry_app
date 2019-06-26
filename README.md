@@ -1,4 +1,4 @@
-# demo
+# vue-demo
 
 > A Vue.js project
 
@@ -10,6 +10,11 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
+
+# if 'npm run dev' was fail please
+cnpm install vux --save
+cnpm install vux-loader --save-dev
+cnpm install less less-loader --save-dev
 
 # build for production with minification
 npm run build

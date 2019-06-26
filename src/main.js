@@ -3,9 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import { LoadingPlugin } from 'vux'
+import { AlertPlugin } from 'vux'
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.config.productionTip = false;
-
+Vue.config.productionTip = false
+Vue.use(Element)
+Vue.use(AlertPlugin)
+Vue.use(LoadingPlugin)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

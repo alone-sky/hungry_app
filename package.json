@@ -1,8 +1,8 @@
 {
-  "name": "demo",
+  "name": "vue-demo",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "alone-sky <18270895950@163.com>",
+  "author": "luwb <18270895950@163.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,8 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.0.0-rc.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vux": "^2.9.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
