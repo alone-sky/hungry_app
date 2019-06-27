@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <i class="el-icon-edit"></i>
-    <group>
-      <cell title="title" value="value"></cell>
-    </group>
+
     <router-view/>
   </div>
 </template>
@@ -21,6 +17,9 @@ export default {
     console.log(this.$store.state.count,'store')
     this.$store.commit('increment',{index:6},{},{})
     console.log(this.$store.state.count,'store2')
+  },
+  mothods:{
+
   }
 }
 </script>
