@@ -1,19 +1,23 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <XHeader :title="title"></XHeader>
   </div>
 </template>
 
 <script>
-
-export default {
-  name: 'Header',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  import { XHeader } from 'vux'
+  export default {
+    name: 'Header',
+    props:['title'],
+    data () {
+      return {
+        msg: ''
+      }
+    },
+    components: {
+      XHeader
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

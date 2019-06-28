@@ -8,10 +8,9 @@ const store = new Vuex.Store({
     token:'123456'
   },
   mutations: {
-    increment (state,obj,obj2,string) {//state是默认的，其余的参数是自定义的
-      state.count += obj.index;
-    }
+    increment (state,number) {//state是默认的，其余的参数是自定义的
+      state.count += number;
+    },
   }
 })
-
 export default store
