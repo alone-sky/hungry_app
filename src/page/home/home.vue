@@ -1,11 +1,7 @@
 <template>
     <div>
       <Header :title="msg"></Header>
-      <div style="display: flex">
-        <div style="flex: 1"><component :is="who"></component></div>
-        <div style="flex: 1"><personCenter></personCenter></div>
-      </div>
-      <div ref="fiters">{{fiter | capitalize}}</div>
+      <component :is="who"></component>
       <Bottom @getDwg="selectTab" :tabList="tabList"></Bottom>
     </div>
 </template>
@@ -19,11 +15,10 @@
   export default {
     data(){
         return{
-          msg:'welecome my HomePage',
+          msg:'组件通信',
           boolean:true,
-          fiter:'aaaaaa',
           who:'todo',
-          tabList:['待办','个人中心','订单','登录']
+          tabList:['组件通信','个人中心','订单','登录']
       }
     },
     components:{
@@ -34,7 +29,6 @@
     },
     mounted() {
       console.log(this.$refs.fiters,'打印节点')
-      this.initData();
       this.initData();
     },
     beforeCreate:function(){
@@ -55,6 +49,7 @@
       },
       selectTab(index){
         index===0 ? this.who='todo' : this.who='personCenter'
+        this.msg=this.tabList[index];
       }
     }
   }

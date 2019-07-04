@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import store from '@/store/index'
 import Home from '@/page/home/home'
 import Login from '@/page/login/login'
+import todoBrother from '@/page/todo/todoBrother'
 
 Vue.use(Router)
 const router = new Router({
@@ -19,6 +20,11 @@ const router = new Router({
       meta: {
         requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
       },
+    },
+    {
+      path:'/todoBrother',
+      name:'todoBrother',
+      component:todoBrother,
     }
   ]
 })

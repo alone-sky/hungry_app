@@ -13,7 +13,7 @@
     name:'personCenter',
     data (){
       return {
-          msg:'欢迎来的我的个人中心',
+          msg:'我的个人中心',
           count2:undefined
       }
     },
