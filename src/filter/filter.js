@@ -1,8 +1,4 @@
 
-import Vue from 'vue'
-import Vuex from 'vuex'
-Vue.use(Vuex);
-
 //设置首字母大写
 const capitalize = value => {
   if (!value) return ''

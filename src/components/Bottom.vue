@@ -11,7 +11,15 @@
 <script>
   export default {
     name:'Bottom',
-    props:['tabList'],
+    props:{
+      tabList: {
+      type: Array,
+      // 对象或数组默认值必须从一个工厂函数获取
+      default: function () {
+          return ['组件通信','复用性&组合','订单','登录']
+        }
+      }
+  },
     data(){
       return {
         current:0

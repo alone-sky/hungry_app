@@ -1,50 +1,49 @@
 <template>
   <div>
-    <span>{{msg}}</span>
-    <span>{{count}}</span>
-    <span>{{count2}}</span>
+    <p>{{msg}}</p>
+    <button-tab>
+        <router-link :to="{ path: 'todoBrother'}" :selected="item.id==1" v-for="(item,index) in arr" :key="item.id">{{item.name}}</router-link>
+    </button-tab>
+    <router-view></router-view>
   </div>
 
 </template>
 
 <script>
-  import vm from '@/plugins/vm'
+  import { ButtonTab, ButtonTabItem } from 'vux'
   export default {
     name:'personCenter',
     data (){
       return {
-          msg:'我的个人中心',
-          count2:undefined
+          msg:'可复用性&组合',
+          arr:[
+            {name:'混入',id:1},
+            {name:'自定义指令',id:2},
+            {name:'插件',id:3},
+            {name:'过滤器',id:4}
+          ]
       }
+    },
+    components:{
+      ButtonTab, ButtonTabItem
     },
     mounted() {
-      console.log(this.$store.state.count,'personCenter');
 
-      console.log(this.$data,'Im vueData')
-
-      vm.$on('todo-cen', (arg) => {
-        this.count2= arg; // 接收
-
-        if(this.count2===10){
-          vm.$off('todo-cen');
-        }
-      });
     },
     methods:{
-      beginPlay(){
-        console.log(`开始 吃饭${this.count}`)
-      }
+
     },
     computed:{
-      count(){
-        return this.$store.state.count//返回store实例的count状态
-      }
+
     },
     watch:{
-      count:function(newValue,oldValue){
-        console.log(newValue,oldValue);
-        this.beginPlay();
-      }
+
     }
   }
 </script>
+
+<style scoped lang="less">
+  .vux-button-group > a{
+    text-decoration: none;
+  }
+</style>

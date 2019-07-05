@@ -2,7 +2,7 @@
     <div>
       <Header :title="msg"></Header>
       <component :is="who"></component>
-      <Bottom @getDwg="selectTab" :tabList="tabList"></Bottom>
+      <Bottom @getDwg="selectTab"></Bottom>
     </div>
 </template>
 
@@ -18,7 +18,6 @@
           msg:'组件通信',
           boolean:true,
           who:'todo',
-          tabList:['组件通信','个人中心','订单','登录']
       }
     },
     components:{

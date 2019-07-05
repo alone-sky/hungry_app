@@ -16,6 +16,7 @@ Vue.use(AlertPlugin)
 Vue.use(LoadingPlugin)
 
 //定义全局过滤器
+console.log(custom,'custom')
 Object.keys(custom).forEach(key => {
   Vue.filter(key, custom[key])
 });
