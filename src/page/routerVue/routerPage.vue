@@ -3,12 +3,13 @@
     <p>{{msg}}</p>
   </div>
 </template>
+
 <script>
   export default {
-    name:'login',
+    name:'routerPage',
     data(){
-      return {
-        msg:'想登录，可惜暂未开发'
+      return{
+        msg:'开启路由学习之旅'
       }
     },
     mounted() {
@@ -20,6 +21,6 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 
 </style>

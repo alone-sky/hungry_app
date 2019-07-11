@@ -3,23 +3,18 @@
     <p>{{msg}}</p>
   </div>
 </template>
+
 <script>
   export default {
-    name:'login',
+    name:'mixin',
     data(){
       return {
-        msg:'想登录，可惜暂未开发'
+        msg:'欢迎来了解混入'
       }
-    },
-    mounted() {
-
-    },
-    methods:{
-
     }
   }
 </script>
 
-<style scoped lang="less">
+<style type="text/css" lang="less" scoped>
 
 </style>

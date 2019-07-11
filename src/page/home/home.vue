@@ -12,6 +12,8 @@
   import personCenter from '@/page/personCenter/personCenter'
   import todo from '@/page/todo/todo'
   import Bottom from '@/components/Bottom'
+  import routerPage from '@/page/routerVue/routerPage'
+  import login from '@/page/login/login'
   export default {
     data(){
         return{
@@ -24,7 +26,9 @@
       Header,
       personCenter,
       todo,
-      Bottom
+      Bottom,
+      routerPage,
+      login
     },
     mounted() {
       console.log(this.$refs.fiters,'打印节点')
@@ -47,8 +51,20 @@
         });
       },
       selectTab(index){
-        index===0 ? this.who='todo' : this.who='personCenter'
-        this.msg=this.tabList[index];
+        switch (index) {
+          case 0:
+            this.who = 'todo'
+            break;
+          case 1:
+            this.who = 'personCenter'
+            break;
+          case 2:
+            this.who = 'routerPage'
+            break;
+          case 3:
+            this.who = 'login'
+            break;
+        }
       }
     }
   }
