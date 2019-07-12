@@ -4,6 +4,8 @@ import store from '@/store/index'
 import Home from '@/page/home/home'
 import Login from '@/page/login/login'
 import todoBrother from '@/page/todo/todoBrother'
+import routerIndex from '@/page/routerVue/index'
+import routerChild from '@/page/routerVue/children/routerChild'
 
 Vue.use(Router)
 const router = new Router({
@@ -25,6 +27,19 @@ const router = new Router({
       path:'/todoBrother',
       name:'todoBrother',
       component:todoBrother,
+    },
+    {
+      path:'/routerIndex',
+      name:'routerIndex',
+      component:routerIndex,
+      children: [
+        {
+          // 当 /user/:id/profile 匹配成功，
+          // UserProfile 会被渲染在 User 的 <router-view> 中
+          path: 'child',
+          component: routerChild
+        }
+      ]
     }
   ]
 })
