@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <XHeader :title="title"></XHeader>
+    <slot :user="user" name="header"></slot>
+    <slot :user2="user" name="footer"></slot>
   </div>
 </template>
 
@@ -11,7 +13,11 @@
     props:['title'],
     data () {
       return {
-        msg: ''
+        msg: '',
+        user : {
+          header: "我是作用域插槽-头部",
+          footer: "我是作用域插槽-底部"
+        }
       }
     },
     components: {

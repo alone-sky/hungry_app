@@ -8,6 +8,7 @@ const vueLoaderConfig = require('./vue-loader.conf')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+const vuxLoader = require('vux-loader')
 
 const webpackConfig = {
   context: path.resolve(__dirname, '../'),

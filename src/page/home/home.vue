@@ -1,6 +1,16 @@
 <template>
     <div>
-      <Header :title="msg"></Header>
+      <Header :title="msg">
+        <!--vue:插槽的使用方式，element中的table自定义列-->
+        <template v-slot:header="scope" >
+          <div style="color:red">{{scope.user.header}}</div>
+        </template>
+
+        <template v-slot:footer="scope" >
+          <div style="color:red">{{scope.user2.footer}}</div>
+        </template>
+
+      </Header>
       <component :is="who"></component>
       <Bottom @getDwg="selectTab"></Bottom>
     </div>
