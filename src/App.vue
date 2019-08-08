@@ -16,7 +16,9 @@ export default {
     console.log(this.$store.state.count,'store')
   },
   mothods:{
-
+    add(){
+        console.log('测试sourceTree')
+    }
   }
 }
 </script>

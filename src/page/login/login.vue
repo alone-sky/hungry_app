@@ -11,7 +11,7 @@
         msg:'想登录，可惜暂未开发'
       }
     },
-    mounted() {
+    mounted(){
 
     },
     methods:{
