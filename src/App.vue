@@ -17,7 +17,7 @@ export default {
   },
   mothods:{
     add(){
-        console.log('测试sourceTree')
+        console.log('测试sourceTree,1111')
     }
   }
 }
