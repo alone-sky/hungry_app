@@ -17,7 +17,7 @@ export default {
   },
   mothods:{
     add(){
-        console.log('测试sourceTree,1111')
+        console.log('测试sourceTree,1111，发达省份的')
     }
   }
 }
